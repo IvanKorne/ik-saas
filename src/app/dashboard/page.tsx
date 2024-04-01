@@ -56,7 +56,7 @@ const Dashboard = async () => {
           </Link>
         ) : (
           <Link href="/dashboard/billing">
-            <Button>Subscrive</Button>
+            <Button>Subscribe</Button>
           </Link>
         )}
       </div>

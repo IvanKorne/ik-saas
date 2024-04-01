@@ -5,21 +5,14 @@ import prisma from "@/lib/db";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { File, Edit } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { revalidatePath } from "next/cache";
-import { TrashButton } from "@/components/SubmitButtons";
+import { revalidatePath, unstable_noStore } from "next/cache";
+import { TrashButton } from "../../components/SubmitButtons";
 
 const Dashboard = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
   const getData = async (id: string) => {
-    // const data = await prisma.note.findMany({
-    //   where: {
-    //     userId: id,
-    //   },
-    //   orderBy: {
-    //     created_at: "desc",
-    //   },
-    // });
+    unstable_noStore();
     const data = await prisma.user.findUnique({
       where: {
         id: user?.id,

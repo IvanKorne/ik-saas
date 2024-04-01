@@ -1,5 +1,6 @@
 import React from "react";
 import { Home, Settings, CreditCard } from "lucide-react";
+import { LocaleRouteNormalizer } from "next/dist/server/future/normalizers/locale-route-normalizer";
 
 export const sidebarItems = [
   { name: "Home", href: "/dashboard", icon: React.createElement(Home) },
@@ -13,4 +14,11 @@ export const sidebarItems = [
     href: "/dashboard/billing",
     icon: React.createElement(CreditCard),
   },
+];
+
+export const featureItems = [
+  { name: "Create unlimited amount of notes with ease" },
+  { name: "Organize your life effectively" },
+  { name: "Edit and delete on the fly" },
+  { name: "Cancel anytime, anyplace, anywhere" },
 ];

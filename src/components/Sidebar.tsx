@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { sidebarItems } from "@/data";
+import { sidebarItems } from "@/lib/data";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";

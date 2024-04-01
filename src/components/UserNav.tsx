@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { sidebarItems } from "@/data";
+import { sidebarItems } from "@/lib/data";
 import { DoorClosed } from "lucide-react";
 import {
   DropdownMenu,
@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuGroup,
 } from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
+import { Avatar, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs";

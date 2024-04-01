@@ -5,7 +5,6 @@ import { Button } from "./ui/button";
 import {
   RegisterLink,
   LoginLink,
-  LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import UserNav from "./UserNav";
@@ -19,7 +18,7 @@ const Navbar = async () => {
         <div className="container flex items-center justify-between">
           <Link href="/">
             <h1 className="font-bold text-3xl">
-              Note<span className="text-primary">SaaS</span>
+              Note<span className="text-primary">Vault</span>
             </h1>
           </Link>
           <div className="flex items-center gap-x-8">
@@ -28,7 +27,7 @@ const Navbar = async () => {
               {(await isAuthenticated()) ? (
                 <UserNav user={user} />
               ) : (
-                <div>
+                <div className="flex items-center gap-x-5">
                   <LoginLink>
                     <Button>Sign In</Button>
                   </LoginLink>

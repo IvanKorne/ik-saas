@@ -37,7 +37,7 @@ const UserNav = ({ user }: any) => {
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             {sidebarItems.map((item, id) => (
-              <Link href={item.href}>
+              <Link href={item.href} key={id}>
                 <DropdownMenuItem asChild>
                   <div className="flex gap-1 mx-auto justify-between items-center">
                     <span className="text-primary">{item.icon}</span>

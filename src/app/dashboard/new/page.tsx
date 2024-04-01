@@ -22,8 +22,8 @@ const NewNote = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
   const createNote = async (formData: FormData) => {
+    "use server";
     unstable_noStore();
-    ("use server");
     if (!user) {
       throw new Error("Not Authorized");
     }
